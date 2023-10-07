@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aventura Global Viagens</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylecarrossel.css">
+    <link rel="stylesheet" href="script.js" type="text/javascript">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/99417ef8b7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.2/css/all.min.css">
     <link rel="stylesheet" href="owlcarousel\dist\assets\owl.carousel.css">
@@ -35,16 +38,53 @@
             <p>Descubra o mundo conosco!</p>
             <img src="img/logo.png" alt="Aventura Global Viagens Logo" width="460" height="434">
         </div>
-
-        <div class="owl-carousel owl-theme" data-items="1" data-loop="true" data-nav="true">
-            <div class="item"><img src="img/aventura1.jpg" alt="Imagem 1"></div>
-            <div class="item"><img src="img/aventura2.jpg" alt="Imagem 2"></div>
-            <!-- Adicione mais imagens conforme necessário -->
-        </div>
+    
+    
+    <div  class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target=".carousel" data-slide-to="0" class="active"></li>
+                <li data-target=".carousel" data-slide-to="1"></li>
+                <li data-target=".carousel" data-slide-to="2"></li>
+                <li data-target=".carousel" data-slide-to="3"></li>
+              </ol>
+          
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="http://www.adobewordpress.com/wp-content/uploads/2014/02/wallpaper-thumb-941.jpg">
+                  <div class="carousel-caption">Görsel #1</div>
+                </div>
+                <div class="item">
+                  <img src="http://www.adobewordpress.com/wp-content/uploads/2014/02/wallpaper-thumb-101.jpg">
+                  <div class="carousel-caption">Görsel #2</div>
+                </div>
+                <div class="item">
+                  <img src="http://www.adobewordpress.com/wp-content/uploads/2014/02/wallpaper-thumb-1051.jpg">
+                  <div class="carousel-caption">Görsel #3</div>
+                </div>
+                <div class="item">
+                  <img src="http://www.adobewordpress.com/wp-content/uploads/2013/07/wallpaper-thumb-74.jpg">
+                  <div class="carousel-caption">Görsel #4</div>
+                </div>
+              </div>
+          
+              <!-- Controls -->
+              <a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Geri</span>
+              </a>
+              <a class="right carousel-control" href=".carousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">İleri</span>
+              </a>
+    </div>
+        
+    
+           
+    
         
     </main>
-    
-    
 
     <section class="packages-section" style="background-color: #898121; color: #fff; text-align: center; padding: 20px;">
         <div class="package-title">
@@ -60,7 +100,8 @@
                 <p>Pacotes de Aventura</p>
             </div>
         </div>
-    </section>
+    </section> 
+    
 
     <footer style="background-color: #4C4B16; color: #fff; padding: 20px;">
         <div class="footer-content" style="display: flex; justify-content: space-between;">
@@ -91,23 +132,8 @@
    
     <script src="owlcarousel\docs\assets\vendors\jquery.min.js"></script>
     <script src="owlcarousel\dist\owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-    <script type="text/javascript">
-
-
-    $(document).ready(function(){
-        $(".owl-carousel").owlCarousel({
-            items: 1,
-            loop: true,
-            margin: 20,
-            nav: true,
-            autoplay: true,
-            dots: true
-        });
-    });
-
-
-
-    </script>
 </body>
 </html>

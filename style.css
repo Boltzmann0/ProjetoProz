@@ -187,6 +187,62 @@ button:hover {
     background-color: #6C6B36; /* Cor de destaque ao passar o mouse */
 }
 
+/* Estilo da barra de pesquisa */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-bar button {
+    background-color: #E7B10A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #FFD700;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo dos resultados de pesquisa */
+.search-results {
+    text-align: center;
+}
+
+.search-results h3 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.search-results p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para nenhum resultado encontrado */
+.search-results p.no-results {
+    font-weight: bold;
+    color: #FF0000; /* Vermelho para indicar nenhum resultado */
+}
+
+
 
 
 .mobile-menu {

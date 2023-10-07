@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras - Aventura Global Viagens</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylecarrossel.css">
+    <link rel="stylesheet" href="script.js" type="text/javascript">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/99417ef8b7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.2/css/all.min.css">
+    <link rel="stylesheet" href="owlcarousel\dist\assets\owl.carousel.css">
+    <link rel="stylesheet" href="owlcarousel\dist\assets\owl.theme.default.min.css">
+</head>
+<body>
+    <header style="background-color: #f7f1e5; height: 80px; color: #333; display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+        <div class="logo">
+            <img src="img/logo.png" alt="Aventura Global Viagens">
+        </div>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="#endereco"><i class="fas fa-map-marker-alt"></i> Endereço</a></li>
+                    <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
+                    <li><a href="#cadastrar" style="background-color: #E7B10A;"><i class="fas fa-user-plus"></i> Cadastrar</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Conteúdo da página de compras -->
+    <section class="shopping-section" style="background-color: #f7f1e5; color: #333; text-align: center; padding: 20px;">
+        <div class="shopping-title">
+            <h2>Passagens Aéreas</h2>
+        </div>
+        <!-- Barra de pesquisa -->
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar passagens...">
+            <button><i class="fas fa-search"></i> Pesquisar</button>
+        </div>
+        <!-- Resultados da busca -->
+        <div class="search-results">
+            <!-- Resultados serão exibidos aqui -->
+        </div>
+    </section>
+
+    <footer style="background-color: #4C4B16; color: #fff; padding: 20px;">
+        <div class="footer-content" style="display: flex; justify-content: space-between;">
+            <div class="footer-info">
+                <h3>Informações Adicionais</h3>
+                <p>Forneça informações adicionais sobre a sua empresa ou site aqui.</p>
+            </div>
+            <div class="footer-links" style="margin-left: auto;">
+                <h3>Links Adicionais</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                    <li><a href="#"><i class="fas fa-globe"></i> Destinos</a></li>
+                    <li><a href="#"><i class="fas fa-book"></i> Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Redes Sociais</h3>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2023 Aventura Global Viagens</p>
+    </footer>
+
+    <!-- Seus scripts e links de bibliotecas JavaScript aqui -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.querySelector(".search-bar input");
+            const searchButton = document.querySelector(".search-bar button");
+            const searchResults = document.querySelector(".search-results");
+    
+            searchButton.addEventListener("click", function () {
+                const searchTerm = searchInput.value.trim().toLowerCase();
+                searchResults.innerHTML = ""; // Limpa os resultados anteriores
+    
+                // Você pode adicionar aqui a lógica de pesquisa com os resultados
+                // Por exemplo, adicione elementos HTML aos searchResults com os resultados da pesquisa
+    
+                // Exemplo simples para demonstração
+                if (searchTerm === "destino1") {
+                    const resultItem = document.createElement("div");
+                    resultItem.innerHTML = "<h3>Destino 1</h3><p>Descrição do Destino 1.</p>";
+                    searchResults.appendChild(resultItem);
+                } else if (searchTerm === "destino2") {
+                    const resultItem = document.createElement("div");
+                    resultItem.innerHTML = "<h3>Destino 2</h3><p>Descrição do Destino 2.</p>";
+                    searchResults.appendChild(resultItem);
+                } else {
+                    const noResults = document.createElement("p");
+                    noResults.textContent = "Nenhum resultado encontrado.";
+                    searchResults.appendChild(noResults);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
