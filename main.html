@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventura Global Viagens</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/99417ef8b7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.2/css/all.min.css">
+    <link rel="stylesheet" href="owlcarousel\dist\assets\owl.carousel.css">
+    <link rel="stylesheet" href="owlcarousel\dist\assets\owl.theme.default.min.css">
+</head>
+<body>
+    <header style="background-color: #f7f1e5; height: 80px; color: #333; display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+        <div class="logo">
+            <img src="img/logo.png" alt="Aventura Global Viagens">
+        </div>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="#endereco"><i class="fas fa-map-marker-alt"></i> Endereço</a></li>
+                    <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
+                    <li><a href="#cadastrar" style="background-color: #E7B10A;"><i class="fas fa-user-plus"></i> Cadastrar</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+    
+    <main style="background-color: #898121; height: 744px; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+        <div class="main-content">
+            <h1>Aventura Global Viagens</h1>
+            <p>Descubra o mundo conosco!</p>
+            <img src="img/logo.png" alt="Aventura Global Viagens Logo" width="460" height="434">
+        </div>
+
+        <div class="owl-carousel owl-theme" data-items="1" data-loop="true" data-nav="true">
+            <div class="item"><img src="img/aventura1.jpg" alt="Imagem 1"></div>
+            <div class="item"><img src="img/aventura2.jpg" alt="Imagem 2"></div>
+            <!-- Adicione mais imagens conforme necessário -->
+        </div>
+        
+    </main>
+    
+    
+
+    <section class="packages-section" style="background-color: #898121; color: #fff; text-align: center; padding: 20px;">
+        <div class="package-title">
+            <h2>Pacotes de Viagens</h2>
+        </div>
+        <div class="packages">
+            <div class="package">
+                <img src="img/ecoturismo.jpg" alt="Pacotes de Ecoturismo">
+                <p>Pacotes de Ecoturismo</p>
+            </div>
+            <div class="package">
+                <img src="img/aventura.jpg" alt="Pacotes de Aventura">
+                <p>Pacotes de Aventura</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background-color: #4C4B16; color: #fff; padding: 20px;">
+        <div class="footer-content" style="display: flex; justify-content: space-between;">
+            <div class="footer-info">
+                <h3>Informações Adicionais</h3>
+                <p>Forneça informações adicionais sobre a sua empresa ou site aqui.</p>
+            </div>
+            <div class="footer-links" style="margin-left: auto;">
+                <h3>Links Adicionais</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                    <li><a href="#"><i class="fas fa-globe"></i> Destinos</a></li>
+                    <li><a href="#"><i class="fas fa-book"></i> Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Redes Sociais</h3>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2023 Aventura Global Viagens</p>
+    </footer>
+    
+   
+    <script src="owlcarousel\docs\assets\vendors\jquery.min.js"></script>
+    <script src="owlcarousel\dist\owl.carousel.min.js"></script>
+
+    <script type="text/javascript">
+
+
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 20,
+            nav: true,
+            autoplay: true,
+            dots: true
+        });
+    });
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+/* Estilos do header */
+.header-container {
+    width: 1440px;
+    height: 80px;
+    margin: 0 auto; /* Centralizar o header na tela */
+}
+
+header {
+    background-color: #f7f1e5;/* Alterado para 100% */
+    height: 80px;   
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo img {
+    max-width: 100px; /* Tamanho máximo da logo */
+    height: auto;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.menu ul li {
+    margin-right: 20px;
+}
+
+.menu ul li:last-child {
+    margin-right: 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #333; /* Cor dos links do menu */
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s; /* Efeito de transição suave */
+}
+
+.menu ul li a i {
+    margin-right: 5px;
+}
+
+.menu ul li a:hover {
+    background-color: #E7B10A;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s; /* Efeito de transição suave */
+}
+
+.main-content {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.main-content h1 {
+    font-size: 36px;
+}
+
+.carousel {
+    width: 50%;
+}
+
+.owl-carousel {
+    width: 200px;
+    height: 400px;
+}
+
+.owl-carousel img {
+    width: 220px;
+    height: 420px;
+}
+
+.package-title {
+    margin-top: 20px;
+}
+
+.package-title h2 {
+    font-size: 24px;
+}
+
+.packages {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.package {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.package img {
+    max-width: 100%;
+    height: auto;
+    width: 600px; /* Tamanho máximo das imagens dos pacotes */
+}
+
+.package p {
+    font-weight: bold;
+}
+
+footer {
+    background-color: #4C4B16;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info {
+    flex: 1;
+}
+
+.footer-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-links,
+.footer-social {
+    flex: 1;
+    text-align: right; /* Alinhar o conteúdo à direita */
+}
+
+.footer-links h3,
+.footer-social h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li,
+.footer-social li {
+    margin-bottom: 5px;
+}
+
+.footer-links a,
+.footer-social a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    text-decoration: underline;
+}
+
+
+.additional-info {
+    flex: 1;
+}
+
+.additional-info p {
+    color: #fff;
+    font-weight: bold;
+}
+
+
+button {
+    background-color: #4C4B16;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6C6B36; /* Cor de destaque ao passar o mouse */
+}
+
+
+
+.mobile-menu {
+    display: none; /* Ocultar o ícone do menu em telas maiores */
+    font-size: 24px;
+}
+
+/* Estilos para telas menores (por exemplo, dispositivos móveis) */
+@media (max-width: 768px) {
+    .menu ul {
+        display: none; /* Ocultar o menu principal em telas menores */
+    }
+
+    .mobile-menu {
+        display: block; /* Mostrar o ícone do menu em telas menores */
+    }
+}
