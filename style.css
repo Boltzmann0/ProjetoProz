@@ -16,7 +16,7 @@ header {
 }
 
 .logo img {
-    max-width: 100px; /* Tamanho máximo da logo */
+    max-width: 10.5%; /* Tamanho máximo da logo */
     height: auto;
 }
 
@@ -56,26 +56,12 @@ header {
 
 .main-content {
     width: 100%;
-    text-align: center;
+    text-align: left;
     padding: 20px;
 }
 
 .main-content h1 {
     font-size: 36px;
-}
-
-.carousel {
-    width: 50%;
-}
-
-.owl-carousel {
-    width: 200px;
-    height: 400px;
-}
-
-.owl-carousel img {
-    width: 220px;
-    height: 420px;
 }
 
 .package-title {
@@ -242,7 +228,32 @@ button:hover {
     color: #FF0000; /* Vermelho para indicar nenhum resultado */
 }
 
+ /* Estilos para o slideshow */
+ .slideshow-container {
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+}
 
+.fade {
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+@keyframes fade {
+    0%, 100% { opacity: 0; }
+    25%, 75% { opacity: 1; }
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+}
 
 
 .mobile-menu {
