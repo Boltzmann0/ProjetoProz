@@ -1,0 +1,11 @@
+
+.blog {
+    flex-direction: column; 
+    text-align: center;
+
+}
+.blog ul{
+    text-align: left;
+}
+
+
