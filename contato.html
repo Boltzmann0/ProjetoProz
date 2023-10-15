@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aventura Global Viagens</title>
+    <title>Contatos - Aventura Global Viagens</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js" type="text/javascript">
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARePQYJhbD3H4VQJad9bCg7k_yJ0PqUrI&callback=console.debug&libraries=maps,marker&v=beta"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/99417ef8b7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.2/css/all.min.css">
@@ -20,7 +20,7 @@
         <div class="menu">
             <nav>
                 <ul>
-                    <li><a href="sobre.html"><i class="fas fa-info-circle"></i>Quem Somos</a></li>
+                    <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Quem Somos</a></li>
                     <li><a href="compras.html"><i class="fas fa-globe"></i> Destinos</a></li>
                     <li><a href="blog.html"><i class="fas fa-book"></i> Blog</a></li>
                     <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
@@ -33,41 +33,35 @@
         </div>
     </header>
     
-    <main style="background-color: #898121; height: 744px; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+    <main class="content-main">
         <div class="main-content">
-            <h1>Aventura Global Viagens</h1>
-            <p>Desfrute de uma das melhores vistas do Brasil, com lindas paisagens e momentos incríveis.</p>
-            <p>Passeio Mais Completo dos Lençóis Maranhenses. Viva momentos que irão marcar sua vida.</p>
-            <img src="img/logo.png" alt="Aventura Global Viagens Logo" width="460" height="434">
+            <h1>Contato</h1>
+            <p>Entre em contato conosco para obter mais informações sobre nossos serviços e pacotes de viagens.</p>
         </div>
-        <div class="image-container">
-        <img src="img/lencois.jpg" alt="Imagem Grande" width="1600" height="600">
-        </div>
-
         
     </main>
 
-   
-
-    <section class="packages-section" style="background-color: #898121; color: #fff; text-align: center; padding: 20px;">
-        <div class="package-title">
-            <h2>Pacotes de Viagens</h2>
-        </div>
-        <div class="packages">
-            <div class="package">
-                <img src="img/circuito-lagoa-bonita.jpg" alt="Pacotes de Ecoturismo">
-                <p>Pacotes de Ecoturismo</p>
-                <a href="compras.html">Comprar</a>
-            </div>
-            <div class="package">
-                <img src="img/santo-amaro-do-maranhao.jpg" alt="Pacotes de Aventura">
-                <p>Pacotes de Aventura</p>
-                <a href="compras.html">Comprar</a>
-            </div>
-        </div>
-    </section> 
+    <gmp-map center="-22.98406219482422,-43.204933166503906" zoom="14" map-id="DEMO_MAP_ID">
+        <gmp-advanced-marker position="-22.98406219482422,-43.204933166503906" title="My location">
+        </gmp-advanced-marker>
+    </gmp-map>
     
-
+    <section class="contact-section" style="background-color: #898121; color: #fff; text-align: center; padding: 20px;">
+        <h2>Fale Conosco</h2>
+        <form class="contact-form" action="#" method="POST">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Seu Nome" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Seu Email" required>
+            </div>
+            <div class="form-group">
+                <textarea name="message" placeholder="Sua Mensagem" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    
     <footer style="background-color: #4C4B16; color: #fff; padding: 20px;">
         <div class="footer-content" style="display: flex; justify-content: space-between;">
             <div class="footer-info">
@@ -96,11 +90,8 @@
         <p>&copy; 2023 Aventura Global Viagens</p>
     </footer>
     
-   
     <script src="owlcarousel\docs\assets\vendors\jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-
 </body>
 </html>
