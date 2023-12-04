@@ -167,6 +167,45 @@ header {
     text-align: center;
 }
 
+.content-blog {
+  
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+.manchete{
+    display: flex;
+    justify-content: space-around;
+}
+.manchete img{
+    margin: 20px;
+    width: 350px;;
+}
+.content-blog::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(transparent, #807823);
+}
+.read-button{
+    border-radius: 5px;
+    margin: 10px;
+    background-color: #f7f1e5;
+    color: #000000;
+}
+.read-button:hover{
+    background-color: #e3d0d0;
+}
+/* classe para ler mais*/
+.card.active .content-blog {
+    height: auto;
+}
+.card.active .content-blog::before {
+    visibility: hidden;
+}
+
 .content-section {
     margin: 20px 0;
     padding: 20px;
