@@ -219,33 +219,43 @@ gmp-map {
     margin-bottom: 20px;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 10px;
     border: none;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .form-group input {
-    height: 40px;
+    height: 60px;
 }
 
 .form-group textarea {
-    height: 120px;
+    height: 180px;
+    resize: none; /* Impede que o usuário redimensione a textarea */
 }
 
 button[type="submit"] {
     background-color: #6C6B36;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-    background-color: #4C4B16; /* Cor de destaque ao passar o mouse */
+    background-color: #4C4B16;
+}
+
+/* Alterando a cor do texto */
+.form-group input,
+.form-group textarea,
+button[type="submit"] {
+    color: #000; /* Altere para a cor desejada, por exemplo, #000 para preto */
 }
 
 

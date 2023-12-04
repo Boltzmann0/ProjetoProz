@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +11,10 @@
     <script src="https://kit.fontawesome.com/99417ef8b7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.2/css/all.min.css">
 </head>
+
 <body>
-    <header style="background-color: #f7f1e5; height: 80px; color: #333; display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+    <header
+        style="background-color: #f7f1e5; height: 80px; color: #333; display: flex; justify-content: space-between; align-items: center; padding: 20px;">
         <div class="logo">
             <a href="main.html">
                 <img src="img/logo.png" alt="Aventura Global Viagens">
@@ -24,7 +27,8 @@
                     <li><a href="compras.html"><i class="fas fa-globe"></i> Destinos</a></li>
                     <li><a href="blog.html"><i class="fas fa-book"></i> Blog</a></li>
                     <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
-                    <li><a href="cadastro.html" style="background-color: #E7B10A;"><i class="fas fa-user-plus"></i> Cadastrar</a></li>
+                    <li><a href="cadastro.html" style="background-color: #E7B10A;"><i class="fas fa-user-plus"></i>
+                            Cadastrar</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,8 +36,9 @@
             <i class="fas fa-bars"></i>
         </div>
     </header>
-    
-    <main style="background-color: #898121; height: 744px; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+
+    <main
+        style="background-color: #898121; height: 744px; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 20px;">
         <div class="main-content">
             <h1>Aventura Global Viagens</h1>
             <p>Desfrute de uma das melhores vistas do Brasil, com lindas paisagens e momentos incríveis.</p>
@@ -41,15 +46,16 @@
             <img src="img/logo.png" alt="Aventura Global Viagens Logo" width="460" height="434">
         </div>
         <div class="image-container">
-        <img src="img/lencois.jpg" alt="Imagem Grande" width="1600" height="600">
+            <img src="img/lencois.jpg" alt="Imagem Grande" width="1600" height="600">
         </div>
 
-        
+
     </main>
 
-   
 
-    <section class="packages-section" style="background-color: #898121; color: #fff; text-align: center; padding: 20px;">
+
+    <section class="packages-section"
+        style="background-color: #898121; color: #fff; text-align: center; padding: 20px;">
         <div class="package-title">
             <h2>Pacotes de Viagens</h2>
         </div>
@@ -65,8 +71,8 @@
                 <a href="compras.html">Comprar</a>
             </div>
         </div>
-    </section> 
-    
+    </section>
+
 
     <footer style="background-color: #4C4B16; color: #fff; padding: 20px;">
         <div class="footer-content" style="display: flex; justify-content: space-between;">
@@ -95,12 +101,53 @@
         </div>
         <p>&copy; 2023 Aventura Global Viagens</p>
     </footer>
-    
-   
+
+
     <script src="owlcarousel\docs\assets\vendors\jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
+    <script>
+        // Array de pacotes de viagens
+        var packages = [
+            { image: 'img/circuito-lagoa-bonita.jpg', title: 'Pacotes de Ecoturismo', link: 'compras.html' },
+            { image: 'img/santo-amaro-do-maranhao.jpg', title: 'Pacotes de Aventura', link: 'compras.html' }
+            // Adicione mais objetos se for necessário
+        ];
+
+        // Função para renderizar os elementos dinamicamente
+        function renderDynamicContent() {
+            var mainContent = document.getElementById('mainContent');
+
+            // Iterar sobre o array de pacotes e criar elementos dinamicamente
+            packages.forEach(function (package) {
+                var packageElement = document.createElement('div');
+                packageElement.className = 'package';
+
+                var imgElement = document.createElement('img');
+                imgElement.src = package.image;
+                imgElement.alt = package.title;
+
+                var titleElement = document.createElement('p');
+                titleElement.textContent = package.title;
+
+                var linkElement = document.createElement('a');
+                linkElement.href = package.link;
+                linkElement.textContent = 'Comprar';
+
+                packageElement.appendChild(imgElement);
+                packageElement.appendChild(titleElement);
+                packageElement.appendChild(linkElement);
+
+                mainContent.appendChild(packageElement);
+            });
+        }
+
+        // Chamar a função de renderização quando a página carregar
+        window.onload = renderDynamicContent;
+    </script>
+
 
 </body>
+
 </html>
