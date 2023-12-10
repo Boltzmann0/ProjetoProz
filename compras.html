@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +14,10 @@
     <link rel="stylesheet" href="owlcarousel\dist\assets\owl.carousel.css">
     <link rel="stylesheet" href="owlcarousel\dist\assets\owl.theme.default.min.css">
 </head>
+
 <body>
-    <header style="background-color: #f7f1e5; height: 80px; color: #333; display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+    <header
+        style="background-color: #f7f1e5; height: 80px; color: #333; display: flex; justify-content: space-between; align-items: center; padding: 20px;">
         <div class="logo">
             <a href="main.html">
                 <img src="img/logo.png" alt="Aventura Global Viagens">
@@ -27,7 +30,8 @@
                     <li><a href="compras.html"><i class="fas fa-globe"></i> Destinos</a></li>
                     <li><a href="blog.html"><i class="fas fa-book"></i> Blog</a></li>
                     <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
-                    <li><a href="cadastro.html" style="background-color: #E7B10A;"><i class="fas fa-user-plus"></i> Cadastrar</a></li>
+                    <li><a href="cadastro.html" style="background-color: #E7B10A;"><i class="fas fa-user-plus"></i>
+                            Cadastrar</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,9 +41,10 @@
     </header>
 
     <!-- Conteúdo da página de compras -->
-    <section class="shopping-section" style="background-color: #f7f1e5; color: #333; text-align: center; padding: 20px;">
+    <section class="shopping-section"
+        style="background-color: #f7f1e5; color: #333; text-align: center; padding: 20px;">
         <div class="shopping-title">
-            <h2>Passagens Aéreas</h2>
+            <h2>Pacotes de Viagens</h2>
         </div>
         <!-- Barra de pesquisa -->
         <div class="search-bar">
@@ -87,14 +92,14 @@
             const searchInput = document.querySelector(".search-bar input");
             const searchButton = document.querySelector(".search-bar button");
             const searchResults = document.querySelector(".search-results");
-    
+
             searchButton.addEventListener("click", function () {
                 const searchTerm = searchInput.value.trim().toLowerCase();
                 searchResults.innerHTML = ""; // Limpa os resultados anteriores
-    
+
                 // Você pode adicionar aqui a lógica de pesquisa com os resultados
                 // Por exemplo, adicione elementos HTML aos searchResults com os resultados da pesquisa
-    
+
                 // Exemplo simples para demonstração
                 if (searchTerm === "destino1") {
                     const resultItem = document.createElement("div");
@@ -113,4 +118,5 @@
         });
     </script>
 </body>
+
 </html>
