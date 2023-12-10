@@ -17,7 +17,7 @@
 
 <body>
     <header
-        style="background-color: #f7f1e5; height: 80px; color: #333; display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+        style="background-color: #4C4B16; height: 80px; color: #333; display: flex; justify-content: space-between; align-items: center; padding: 20px;">
         <div class="logo">
             <a href="main.html">
                 <img src="img/logo.png" alt="Aventura Global Viagens">
@@ -26,12 +26,13 @@
         <div class="menu">
             <nav>
                 <ul>
-                    <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Quem Somos</a></li>
+                    <li><a href="main.html"><i class="fas fa-home"></i> Página Inicial</a></li>
+                    <li><a href="sobre.html"><i class="fas fa-info-circle"></i>Quem Somos</a></li>
                     <li><a href="compras.html"><i class="fas fa-globe"></i> Destinos</a></li>
                     <li><a href="blog.html"><i class="fas fa-book"></i> Blog</a></li>
                     <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
-                    <li><a href="cadastro.html" style="background-color: #E7B10A;"><i class="fas fa-user-plus"></i>
-                            Cadastrar</a></li>
+                    <li><a href="cadastro.html" style="background-color: #E7B10A;"><i
+                                class="fas fa-user-plus"></i>Cadastrar</a></li>
                 </ul>
             </nav>
         </div>
@@ -52,8 +53,25 @@
             <button><i class="fas fa-search"></i> Pesquisar</button>
         </div>
         <!-- Resultados da busca -->
+
+        <div class="search-suggestions">
+            <p>Sugestões: <span onclick="suggestSearch('Maranhão')">Maranhão</span>, <span
+                    onclick="suggestSearch('São Paulo')">São Paulo</span>, <span
+                    onclick="suggestSearch('Rio de Janeiro')">Rio de Janeiro</span>, ...</p>
+        </div>
+
         <div class="search-results">
-            <!-- Resultados serão exibidos aqui -->
+            <table id="result-table">
+                <thead>
+                    <tr>
+                        <th>Destino</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Resultados serão exibidos aqui -->
+                </tbody>
+            </table>
         </div>
     </section>
 
@@ -91,31 +109,83 @@
         document.addEventListener("DOMContentLoaded", function () {
             const searchInput = document.querySelector(".search-bar input");
             const searchButton = document.querySelector(".search-bar button");
-            const searchResults = document.querySelector(".search-results");
+            const searchResults = document.querySelector(".search-results tbody");
+
 
             searchButton.addEventListener("click", function () {
                 const searchTerm = searchInput.value.trim().toLowerCase();
                 searchResults.innerHTML = ""; // Limpa os resultados anteriores
 
-                // Você pode adicionar aqui a lógica de pesquisa com os resultados
-                // Por exemplo, adicione elementos HTML aos searchResults com os resultados da pesquisa
+                // Substitua este array com seus dados reais
+                const pacotesDeViagem = [
+                    { destino: "Maranhão", preco: "R$ 1500,00" },
+                    { destino: "São Paulo", preco: "R$ 2000,00" },
+                    { destino: "Rio de Janeiro", preco: "R$ 1800,00" },
+                    { destino: "Salvador", preco: "R$ 2200,00" },
+                    { destino: "Fortaleza", preco: "R$ 1700,00" },
+                    { destino: "Manaus", preco: "R$ 2100,00" },
+                    { destino: "Belo Horizonte", preco: "R$ 1600,00" },
+                    { destino: "Recife", preco: "R$ 2300,00" },
+                    { destino: "Curitiba", preco: "R$ 2000,00" },
+                    { destino: "Brasília", preco: "R$ 1800,00" },
+                    { destino: "Belém", preco: "R$ 2200,00" },
+                    { destino: "Vitória", preco: "R$ 1900,00" },
+                    { destino: "Florianópolis", preco: "R$ 2100,00" },
+                    { destino: "Natal", preco: "R$ 1700,00" },
+                    { destino: "João Pessoa", preco: "R$ 1600,00" },
+                    { destino: "Cuiabá", preco: "R$ 2300,00" },
+                    { destino: "Goiânia", preco: "R$ 2000,00" },
+                    { destino: "Maceió", preco: "R$ 1800,00" },
+                    { destino: "Campinas", preco: "R$ 2200,00" },
+                    { destino: "Bonito", preco: "R$ 2500,00" },
+                    { destino: "Chapada Diamantina", preco: "R$ 2400,00" },
+                    { destino: "Fernando de Noronha", preco: "R$ 2800,00" },
+                    { destino: "Lençóis Maranhenses", preco: "R$ 2600,00" },
+                    { destino: "Pantanal", preco: "R$ 2700,00" },
+                    { destino: "Jalapão", preco: "R$ 2300,00" },
+                    { destino: "Serra da Capivara", preco: "R$ 2500,00" },
+                    { destino: "Chapada dos Veadeiros", preco: "R$ 2400,00" },
+                    { destino: "Aparados da Serra", preco: "R$ 2700,00" },
+                    { destino: "Amazonas", preco: "R$ 2600,00" },
+                    { destino: "Ilha Grande", preco: "R$ 2800,00" },
+                    // Adicione mais destinos e preços conforme necessário
+                ];
 
-                // Exemplo simples para demonstração
-                if (searchTerm === "destino1") {
-                    const resultItem = document.createElement("div");
-                    resultItem.innerHTML = "<h3>Maranhão</h3><p>Descrição do Destino 1.</p>";
-                    searchResults.appendChild(resultItem);
-                } else if (searchTerm === "destino2") {
-                    const resultItem = document.createElement("div");
-                    resultItem.innerHTML = "<h3>São Paulo</h3><p>Descrição do Destino 2.</p>";
-                    searchResults.appendChild(resultItem);
-                } else {
-                    const noResults = document.createElement("p");
-                    noResults.textContent = "Nenhum resultado encontrado.";
-                    searchResults.appendChild(noResults);
+                // Filtra os pacotes de viagem com base no termo de pesquisa
+                const resultadosFiltrados = pacotesDeViagem.filter(pacote =>
+                    pacote.destino.toLowerCase().includes(searchTerm)
+                );
+
+                // Exibe os resultados na tabela
+                resultadosFiltrados.forEach(pacote => {
+                    const resultRow = document.createElement("tr");
+                    resultRow.innerHTML = `<td>${pacote.destino}</td><td>${pacote.preco}</td>`;
+                    searchResults.appendChild(resultRow);
+                });
+
+                // Se não houver resultados, exibe uma mensagem
+                if (resultadosFiltrados.length === 0) {
+                    const noResultsRow = document.createElement("tr");
+                    noResultsRow.innerHTML = `<td colspan="2">Nenhum resultado encontrado.</td>`;
+                    searchResults.appendChild(noResultsRow);
                 }
+
+
+            });
+
+            // Função para sugerir pesquisa ao clicar nas sugestões
+            window.suggestSearch = function (suggestion) {
+                searchInput.value = suggestion;
+                searchPackages(); // Execute a pesquisa quando clicar em uma sugestão
+            };
+
+            // Adicione o event listener fora da função do botão de pesquisa
+            searchButton.addEventListener("click", function () {
+                // Conteúdo da função do botão de pesquisa
             });
         });
+
+
     </script>
 </body>
 

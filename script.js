@@ -12,6 +12,8 @@ $('section.awSlider .carousel').on('slid.bs.carousel', function () {
 });
 
 
+
+
 /* 
 Philips ambilight tv
 Üzerine gleince duruyor slide

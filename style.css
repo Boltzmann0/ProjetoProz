@@ -36,7 +36,7 @@ header {
 
 .menu ul li a {
     text-decoration: none;
-    color: #333; /* Cor dos links do menu */
+    color: #fff; /* Cor dos links do menu */
     padding: 10px 20px;
     border-radius: 5px;
     display: flex;
@@ -232,51 +232,63 @@ a:hover {
     color: #E7B10A;
 }
 
-gmp-map {
+.map {
     height: 100%;
 }
 
-.contact-section {
+.map-section, .contact-section {
+    flex-basis: auto;
     background-color: #898121;
     color: #fff;
-    text-align: center;
     padding: 20px;
-}
+  }
 
-.contact-section h2 {
+  .map-section {
+    text-align: center;
+    align-items: center;
+  }
+
+  .map-section iframe {
+    margin: auto; /* Para centralizar o mapa horizontalmente */
+  }
+
+  .contact-section {
+    text-align: left;
+    flex-direction: column;
+  }
+
+  .contact-section h2 {
     font-size: 28px;
     margin-bottom: 20px;
-}
+  }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+  .contact-form {
+    width: 100%;
+  }
 
-.form-group {
+  .form-group {
     margin-bottom: 20px;
-}
+  }
 
-.form-group input,
-.form-group textarea {
+  .form-group input,
+  .form-group textarea {
     width: 100%;
     padding: 10px;
     border: none;
     border-radius: 5px;
     box-sizing: border-box;
-}
+  }
 
-.form-group input {
+  .form-group input {
     height: 60px;
-}
+  }
 
-.form-group textarea {
+  .form-group textarea {
     height: 180px;
-    resize: none; /* Impede que o usuário redimensione a textarea */
-}
+    resize: none;
+  }
 
-button[type="submit"] {
+  button[type="submit"] {
     background-color: #6C6B36;
     color: #fff;
     border: none;
@@ -284,19 +296,18 @@ button[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
+  }
 
-button[type="submit"]:hover {
+  button[type="submit"]:hover {
     background-color: #4C4B16;
-}
+  }
 
-/* Alterando a cor do texto */
-.form-group input,
-.form-group textarea,
-button[type="submit"] {
-    color: #000; /* Altere para a cor desejada, por exemplo, #000 para preto */
-}
-
+  /* Alterando a cor do texto */
+  .form-group input,
+  .form-group textarea,
+  button[type="submit"] {
+    color: #000; 
+  }
 
 
 footer {
@@ -347,7 +358,7 @@ footer {
 .footer-links a,
 .footer-social a {
     text-decoration: none;
-    color: #fff;
+    color: #333;
     display: block;
 }
 
@@ -432,6 +443,23 @@ button:hover {
 .search-results p.no-results {
     font-weight: bold;
     color: #FF0000; /* Vermelho para indicar nenhum resultado */
+}
+
+/* Adicione estilos para a tabela de resultados */
+#result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#result-table th, #result-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#result-table th {
+    background-color: #f2f2f2;
 }
 
 
