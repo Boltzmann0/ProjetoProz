@@ -20,14 +20,14 @@ if (!isset($_SESSION['usuario_id'])) {
 <body>
     <header style="background-color: #4C4B16; height: 80px; color: #333; display: flex; justify-content: space-between; align-items: center; padding: 20px;">
         <div class="logo">
-            <a href="main.html">
+            <a href="index.html">
                 <img src="img/logo.png" alt="Aventura Global Viagens">
             </a>
         </div>
         <div class="menu">
             <nav>
                 <ul>
-                    <li><a href="main.html"><i class="fas fa-home"></i> Página Inicial</a></li>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Página Inicial</a></li>
                     <!-- Adicione mais links conforme necessário -->
                     <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
                 </ul>
