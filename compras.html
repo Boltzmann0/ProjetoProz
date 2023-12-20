@@ -17,16 +17,16 @@
 
 <body>
     <header
-        style="background-color: #4C4B16; height: 80px; color: #333; display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+        style="background-color: #4C4B16; height: 80px; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 20px;">
         <div class="logo">
-            <a href="main.html">
+            <a href="index.html">
                 <img src="img/logo.png" alt="Aventura Global Viagens">
             </a>
         </div>
         <div class="menu">
             <nav>
                 <ul>
-                    <li><a href="main.html"><i class="fas fa-home"></i> Página Inicial</a></li>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Página Inicial</a></li>
                     <li><a href="sobre.html"><i class="fas fa-info-circle"></i>Quem Somos</a></li>
                     <li><a href="compras.html"><i class="fas fa-globe"></i> Destinos</a></li>
                     <li><a href="blog.html"><i class="fas fa-book"></i> Blog</a></li>
@@ -40,41 +40,41 @@
             <i class="fas fa-bars"></i>
         </div>
     </header>
-<main >
-    <!-- Conteúdo da página de compras -->
-    <section class="shopping-section"
-        style="background-color: #f7f1e5; color: #333; text-align: center; padding: 20px; height: 500px;">
-        <div class="shopping-title">
-            <h2>Pacotes de Viagens</h2>
-        </div>
-        <!-- Barra de pesquisa -->
-        <div class="search-bar">
-            <input type="text" placeholder="Pesquisar passagens...">
-            <button><i class="fas fa-search"></i> Pesquisar</button>
-        </div>
-        <!-- Resultados da busca -->
+    <main>
+        <!-- Conteúdo da página de compras -->
+        <section class="shopping-section"
+            style="background-color: #f7f1e5; color: #333; text-align: center; padding: 20px; height: 500px;">
+            <div class="shopping-title">
+                <h2>Pacotes de Viagens</h2>
+            </div>
+            <!-- Barra de pesquisa -->
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar passagens...">
+                <button><i class="fas fa-search"></i> Pesquisar</button>
+            </div>
+            <!-- Resultados da busca -->
 
-        <div class="search-suggestions">
-            <p>Sugestões: <span onclick="suggestSearch('Maranhão')">Maranhão</span>, <span
-                    onclick="suggestSearch('São Paulo')">São Paulo</span>, <span
-                    onclick="suggestSearch('Rio de Janeiro')">Rio de Janeiro</span>, ...</p>
-        </div>
+            <div class="search-suggestions">
+                <p>Sugestões: <span onclick="suggestSearch('Maranhão')">Maranhão</span>, <span
+                        onclick="suggestSearch('São Paulo')">São Paulo</span>, <span
+                        onclick="suggestSearch('Rio de Janeiro')">Rio de Janeiro</span>, ...</p>
+            </div>
 
-        <div class="search-results">
-            <table id="result-table">
-                <thead>
-                    <tr>
-                        <th>Destino</th>
-                        <th>Preço</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Resultados serão exibidos aqui -->
-                </tbody>
-            </table>
-        </div>
-    </section>
-</main>
+            <div class="search-results">
+                <table id="result-table">
+                    <thead>
+                        <tr>
+                            <th>Destino</th>
+                            <th>Preço</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Resultados serão exibidos aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
     <footer style="background-color: #4C4B16; color: #fff; padding: 20px;">
         <div class="footer-content" style="display: flex; justify-content: space-between;">
             <div class="footer-info">
