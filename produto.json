@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "nome": "Smartphone Galaxy S22",
+      "marca": "Samsung",
+      "categoria": "Eletrônicos",
+      "preco": 2999.99,
+      "quantidade_estoque": 50,
+      "disponivel_pronta_entrega": true
+    },
+    {
+      "id": 2,
+      "nome": "Notebook Inspiron 15",
+      "marca": "Dell",
+      "categoria": "Informática",
+      "preco": 3499.99,
+      "quantidade_estoque": 30,
+      "disponivel_pronta_entrega": true
+    },
+    {
+      "id": 3,
+      "nome": "Fone de Ouvido Bluetooth WH-1000XM4",
+      "marca": "Sony",
+      "categoria": "Áudio",
+      "preco": 799.99,
+      "quantidade_estoque": 20,
+      "disponivel_pronta_entrega": false
+    }
+  ]
+  
